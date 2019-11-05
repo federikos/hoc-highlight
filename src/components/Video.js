@@ -1,10 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import withHighlight from './withHighlight';
 
 const Video = ({url, views}) => {
   return (
     <div className="item item-video">
-      <iframe src={url} frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <iframe src={url} frameBorder="0" allow="autoplay; encrypted-media" allowFullScreen></iframe>
       <p className="views">Просмотров: {views}</p>
     </div>
   );
@@ -15,4 +16,4 @@ Video.propTypes = {
   views: PropTypes.number.isRequired,
 };
 
-export default Video;
+export default withHighlight(Video);

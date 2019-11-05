@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import withHighlight from './withHighlight';
 
 const Article = ({views, title}) => {
   return (
@@ -15,4 +16,4 @@ Article.propTypes = {
   views: PropTypes.number.isRequired,
 };
 
-export default Article;
+export default withHighlight(Article);
